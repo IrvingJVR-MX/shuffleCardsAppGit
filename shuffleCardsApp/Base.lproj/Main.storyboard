@@ -17,8 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QVr-hv-dyV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-wY-9SX">
-                                <rect key="frame" x="25" y="69" width="364" height="31"/>
+                                <rect key="frame" x="20" y="100" width="374" height="31"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
@@ -28,7 +32,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IbC-yE-LN5">
-                                <rect key="frame" x="0.0" y="130" width="414" height="707"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="726"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SDR-P8-1eB">
                                     <size key="itemSize" width="120" height="165"/>
@@ -70,17 +74,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbC-yE-LN5" secondAttribute="trailing" id="1Bm-fB-PuC"/>
-                            <constraint firstItem="IbC-yE-LN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9FF-4J-mDc"/>
-                            <constraint firstItem="IbC-yE-LN5" firstAttribute="top" secondItem="qtG-wY-9SX" secondAttribute="bottom" constant="30" id="OCt-XJ-YFI"/>
-                            <constraint firstItem="qtG-wY-9SX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="cdl-fp-4aa"/>
-                            <constraint firstItem="qtG-wY-9SX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dY4-na-huD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IbC-yE-LN5" secondAttribute="bottom" constant="25" id="hvN-pj-d09"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtG-wY-9SX" secondAttribute="trailing" constant="25" id="snh-ZH-gfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IbC-yE-LN5" secondAttribute="bottom" id="2OM-eR-eAX"/>
+                            <constraint firstItem="qtG-wY-9SX" firstAttribute="top" secondItem="QVr-hv-dyV" secondAttribute="bottom" constant="5" id="3JK-9E-Wx8"/>
+                            <constraint firstItem="IbC-yE-LN5" firstAttribute="top" secondItem="qtG-wY-9SX" secondAttribute="bottom" constant="5" id="FPG-6X-T3b"/>
+                            <constraint firstItem="QVr-hv-dyV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kkj-O0-SNL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtG-wY-9SX" secondAttribute="trailing" constant="20" id="Lkf-09-4j7"/>
+                            <constraint firstItem="IbC-yE-LN5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hUa-nM-dG1"/>
+                            <constraint firstItem="IbC-yE-LN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mNG-4O-1fF"/>
+                            <constraint firstItem="QVr-hv-dyV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mwF-zg-Vxg"/>
+                            <constraint firstItem="qtG-wY-9SX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qns-w0-gme"/>
+                            <constraint firstItem="QVr-hv-dyV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wNU-HW-4hq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="IbC-yE-LN5" id="6bN-hb-IFp"/>
+                        <outlet property="searchBar" destination="QVr-hv-dyV" id="8E9-Uq-XHt"/>
                         <segue destination="eTa-cW-UQE" kind="presentation" identifier="GoToViewCardViewController" id="Mcg-pc-cqJ"/>
                     </connections>
                 </viewController>
